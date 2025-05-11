@@ -10,27 +10,33 @@
   <link rel="stylesheet" href="header.css"/>
 </head>
 <body>
+  <header>
     <nav class="navbar">
-        <div class="nav-content">
-            <div class="nav-logo">
-                <img src="assets/lightsout-logo-header.png" alt="Lights Out Logo"/>
-            </div>
-            <ul class="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#beta-form" class="btn-nav-glow">Join Beta</a></li>
-            </ul>
+        <div class="nav-logo">
+            <img src="assets/lightsout-logo-header.png" alt="Lights Out Logo"/>
         </div>
-    </nav>    
-  <header id="home" class="hero section">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="/">Home</a></li>
+          <li class="nav-item"><a href="#about">About</a></li>
+          <li class="nav-item"><a href="#features">Features</a></li>
+          <li class="nav-item"><a href="#contact">Contact</a></li>
+          <li class="nav-item"><a href="#beta-form" class="btn-nav-glow">Join Beta</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+    </nav>
+  </header>
+
+  <section id="home" class="hero section">
     <div class="content">
       <img src="assets/lightsout-logo.png" alt="Lights Out Logo" class="logo"/>
       <p>Challenge your brain with glowing puzzles and daily thrills.</p>
       <a href="#beta-form" class="btn-glow">Join Beta</a>
     </div>
-  </header>
+  </section>
 
   <section id="about" class="about section">
     <h2>What's Lights Out?</h2>
@@ -111,6 +117,6 @@
       <a href="#contact">Contact</a>
     </div>
   </footer>
-
+  <script src="script.js" type="text/javascript" defer></script>
 </body>
 </html>
