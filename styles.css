@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  background: #0a1416;
+  color: white;
+  overflow-x: hidden;
+}
+
+.section {
+  height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #145d62, #0b2f32, #0a1416);
+}
+
+.logo {
+  max-width: 400px;
+}
+
+
+.hero h1 {
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #5ed7c1;
+}
+
+.btn-glow {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 16px;
+  color: black;
+  background: #30e3ca;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+  box-shadow: 0 0 15px #30e3ca;
+}
+
+.btn-glow:hover {
+  background: #5ed7c1;
+  box-shadow: 0 0 25px #5ed7c1;
+}
+
+.about p, .signup p {
+  max-width: 600px;
+  color: #5ed7c1;
+}
+
+.preview-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.preview-images img {
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #0fbfab;
+  transition: transform 0.3s;
+}
+
+.preview-images img:hover {
+  transform: scale(1.05);
+}
+
+.features h2 {
+  margin-bottom: 20px;
+}
+
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 45px;
+  margin-bottom: 45px;
+}
+
+.signup form {
+  max-width: 400px;
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.signup input {
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #1b2c2c;
+  color: white;
+}
+
+.signup input::placeholder {
+  color: #5ed7c1;
+}
+
+.signup .logo {
+  max-width: 200px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0a1416;
+  font-size: 14px;
+  color: #5ed7c1;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #0a1416dd; /* semi-transparent */
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  padding: 15px 30px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+.nav-logo {
+  font-size: 22px;
+  color: #30e3ca;
+  font-weight: bold;
+}
+
+.nav-logo img {
+  max-width: 150px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #5ed7c1;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #30e3ca;
+}
+
+.btn-nav-glow {
+  background: #30e3ca;
+  padding: 8px 18px;
+  border-radius: 25px;
+  color: black !important;
+  font-weight: bold;
+  box-shadow: 0 0 15px #30e3ca;
+  transition: 0.3s;
+}
+
+.btn-nav-glow:hover {
+  background: #5ed7c1;
+  box-shadow: 0 0 25px #5ed7c1;
+}
+.feature-subtitle {
+  color: #5ed7c1;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  max-width: 600px;
+  font-size: 16px;
+}
+
+.feature-box {
+  background: #13222a;
+  border-radius: 16px;
+  padding: 25px;
+  width: 250px;
+  color: #5ed7c1;
+  box-shadow: 0 0 15px rgba(41, 130, 118, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(94, 215, 193, 0.4);
+}
+
+.feature-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.feature-box h3 {
+  margin: 10px 0 5px;
+  font-size: 20px;
+  color: #30e3ca;
+}
+
+.feature-box p {
+  font-size: 14px;
+  color: #5ed7c1;
+}
+
+.contact {
+  text-align: center;
+  padding: 60px 20px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  /* background-color: #223436;
+  margin: 20px; */
+  color: #30e3ca;
+  height: auto;
+}
+
+.contact a.contact-email {
+  color: #5ed7c1;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.contact a.contact-email:hover {
+  color: #30e3ca;
+  text-shadow: 0 0 5px #30e3ca;
+}
