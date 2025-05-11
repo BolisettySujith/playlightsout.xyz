@@ -16,8 +16,8 @@ body {
 }
 
 .section {
-  height: 100vh;
-  padding: 60px 20px;
+  min-height: 100vh; /* Changed from height to min-height for flexibility */
+  padding: 40px 5%; /* Reduced padding for smaller screens */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,25 +32,25 @@ body {
 }
 
 .logo {
-  max-width: 400px;
+  max-width: 80%; /* Relative unit for responsiveness */
+  height: auto;
 }
 
-
 .hero h1 {
-  font-size: 48px;
+  font-size: 2.5rem; /* Relative unit */
   margin: 10px 0;
 }
 
 .hero p {
-  font-size: 18px;
-  margin-bottom: 30px;
+  font-size: 1rem; /* Relative unit */
+  margin-bottom: 20px;
   color: #5ed7c1;
 }
 
 .btn-glow {
   display: inline-block;
-  padding: 12px 25px;
-  font-size: 16px;
+  padding: 10px 20px;
+  font-size: 1rem;
   color: black;
   background: #30e3ca;
   border: none;
@@ -66,21 +66,24 @@ body {
   box-shadow: 0 0 25px #5ed7c1;
 }
 
-.about p, .signup p {
-  max-width: 600px;
+.about p,
+.signup p {
+  max-width: 90%; /* Relative unit */
   color: #5ed7c1;
+  font-size: 1rem;
 }
 
 .preview-images {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 50px;
-  margin-top: 30px;
+  gap: 20px; /* Reduced gap for smaller screens */
+  margin-top: 20px;
 }
 
 .preview-images img {
-  width: 300px;
+  max-width: 100%; /* Responsive images */
+  height: auto;
   border-radius: 12px;
   box-shadow: 0 0 15px #0fbfab;
   transition: transform 0.3s;
@@ -91,29 +94,30 @@ body {
 }
 
 .features h2 {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
 }
 
 .feature-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 45px;
-  margin-bottom: 45px;
+  gap: 20px; /* Reduced gap */
+  margin-bottom: 20px;
 }
 
 .signup form {
-  max-width: 400px;
+  max-width: 90%; /* Relative unit */
   width: 100%;
-  margin-top: 30px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
 .signup input {
-  padding: 12px;
-  font-size: 16px;
+  padding: 10px;
+  font-size: 1rem;
   border: none;
   border-radius: 8px;
   background: #1b2c2c;
@@ -125,30 +129,32 @@ body {
 }
 
 .signup .logo {
-  max-width: 200px;
+  max-width: 50%; /* Smaller logo on mobile */
+  height: auto;
 }
 
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 15px;
   background: #0a1416;
-  font-size: 14px;
+  font-size: 0.9rem;
   color: #5ed7c1;
 }
 
 .feature-subtitle {
   color: #5ed7c1;
   margin-top: 10px;
-  margin-bottom: 40px;
-  max-width: 600px;
-  font-size: 16px;
+  margin-bottom: 20px;
+  max-width: 90%;
+  font-size: 1rem;
 }
 
 .feature-box {
   background: #13222a;
   border-radius: 16px;
-  padding: 25px;
-  width: 250px;
+  padding: 20px;
+  width: 100%; /* Full width on mobile */
+  max-width: 300px; /* Limit width on larger screens */
   color: #5ed7c1;
   box-shadow: 0 0 15px rgba(41, 130, 118, 0.2);
   text-align: center;
@@ -161,24 +167,24 @@ footer {
 }
 
 .feature-icon {
-  font-size: 32px;
+  font-size: 2rem;
   margin-bottom: 10px;
 }
 
 .feature-box h3 {
   margin: 10px 0 5px;
-  font-size: 20px;
+  font-size: 1.2rem;
   color: #30e3ca;
 }
 
 .feature-box p {
-  font-size: 14px;
+  font-size: 0.9rem;
   color: #5ed7c1;
 }
 
 .contact {
   text-align: center;
-  padding: 60px 20px;
+  padding: 40px 5%;
   font-family: 'Bricolage Grotesque', sans-serif;
   color: white;
   height: auto;
@@ -187,8 +193,8 @@ footer {
 .contact p,
 .contact a.contact-email {
   color: #30e3ca;
+  font-size: 1rem;
 }
-
 
 .contact a.contact-email {
   color: #5ed7c1;
@@ -199,4 +205,110 @@ footer {
 .contact a.contact-email:hover {
   color: #30e3ca;
   text-shadow: 0 0 5px #30e3ca;
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+  .section {
+    padding: 60px 10%;
+  }
+
+  .logo {
+    max-width: 400px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .btn-glow {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+  }
+
+  .preview-images {
+    gap: 30px;
+  }
+
+  .preview-images img {
+    max-width: 300px;
+  }
+
+  .features h2 {
+    font-size: 2rem;
+  }
+
+  .feature-grid {
+    gap: 30px;
+  }
+
+  .feature-box {
+    width: 250px;
+  }
+
+  .signup form {
+    max-width: 400px;
+  }
+
+  .signup .logo {
+    max-width: 200px;
+  }
+
+  .feature-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 80px 15%;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .preview-images {
+    gap: 50px;
+  }
+
+  .feature-grid {
+    gap: 45px;
+  }
+
+  .feature-box {
+    width: 280px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .section {
+    padding: 20px 3%;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .preview-images img {
+    max-width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .feature-box {
+    max-width: 90%;
+  }
+
+  .signup .logo {
+    max-width: 40%;
+  }
 }
