@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #0a1416;
+    color: white;
+    line-height: 1.6;
+}
+
+.section {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+h1, h2, h3, h4 {
+    color: #30e3ca;
+}
+
+p, li {
+    color: #5ed7c1;
+    margin-bottom: 16px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+a {
+    color: #30e3ca;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #5ed7c1;
+    text-shadow: 0 0 5px #30e3ca;
+}
+
