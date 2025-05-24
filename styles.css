@@ -16,8 +16,8 @@ body {
 }
 
 .section {
-  min-height: 100vh; /* Changed from height to min-height for flexibility */
-  padding: 40px 5%; /* Reduced padding for smaller screens */
+  min-height: 100vh;
+  padding: 40px 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,23 +26,102 @@ body {
 }
 
 .hero {
-  position: relative;
   overflow: hidden;
+  min-height: 100vh;
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
   background: linear-gradient(180deg, #145d62, #0b2f32, #0a1416);
 }
 
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-left,
+.hero-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-left {
+  gap: 20px;
+  text-align: center; /* Default for mobile */
+  align-items: center; /* Default for mobile */
+}
+
+.app-screenshot {
+  max-width: 60%;
+  width: 80%;
+  height: auto;
+  border-radius: 12px;
+  margin-top: 40px;
+  box-shadow: 0 0 20px rgba(48, 227, 202, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.app-screenshot:hover {
+  transform: scale(1.03);
+}
+
+.subtitle {
+  font-size: 2rem;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ddd;
+  max-width: 450px;
+  margin: 0 auto; /* Default for mobile */
+}
+
+.btn-glow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  font-weight: 600;
+  background-color: #30e3ca;
+  color: #121212;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: pulse 2s infinite;
+}
+
+.playstore-btn:hover {
+  transform: scale(1.05);
+}
+
+.playstore-btn-icon {
+  width: 300px;
+}
+
 .logo {
-  max-width: 80%; /* Relative unit for responsiveness */
+  max-width: 100%;
   height: auto;
 }
 
 .hero h1 {
-  font-size: 2.5rem; /* Relative unit */
+  font-size: 2.5rem;
   margin: 10px 0;
 }
 
 .hero p {
-  font-size: 1rem; /* Relative unit */
+  font-size: 1rem;
   margin-bottom: 20px;
   color: #5ed7c1;
 }
@@ -66,71 +145,199 @@ body {
   box-shadow: 0 0 25px #5ed7c1;
 }
 
-.about p,
-.signup p {
-  max-width: 90%; /* Relative unit */
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: white;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-left,
+.about-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-right {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.about-image {
+  max-width: 50%;
+  height: auto;
+  border-radius: 12px;
+  /* box-shadow: 0 0 15px #0fbfab; */
+  transition: transform 0.3s;
+}
+
+.about-image:hover {
+  transform: scale(1.05);
+}
+
+.about-right p {
+  max-width: 100%;
+  text-align: justify;
   color: #5ed7c1;
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.about-right ul {
+  list-style-type: none; /* Remove default bullets */
+  padding: 0;
+  margin: 20px 0 0 0; /* Add spacing above the list, no left/right/bottom margin */
+  text-align: justify;
+
+}
+
+.about-right li {
+  position: relative;
+  padding-left: 25px; /* Space for custom bullet */
+  margin-bottom: 10px; /* Space between list items */
+  font-size: 1.1rem;
+  color: #5ed7c1;
+  line-height: 1.6;
+}
+
+.about-right li strong {
+  color: #c0fff7;
+  font-size: 1.13em;
+}
+
+/* Add a custom bullet using a pseudo-element */
+.about-right li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: #30e3ca;
+  font-size: 1.5rem;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features h2 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+  color: white;
+}
+
+.feature-subtitle{
+  color: #5ed7c1;
+  margin-top: 10px;
+  margin-bottom: 100px;
+  max-width: 90%;
   font-size: 1rem;
 }
 
-.preview-images {
+.feature-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px; /* Reduced gap for smaller screens */
-  margin-top: 20px;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.preview-images img {
-  max-width: 100%; /* Responsive images */
+.feature-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.feature-image,
+.feature-content {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-image {
+  align-items: center;
+}
+
+.feature-content {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.feature-img {
+  max-width: 70%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 0 15px #0fbfab;
   transition: transform 0.3s;
 }
 
-.preview-images img:hover {
+.feature-img:hover {
   transform: scale(1.05);
 }
 
-.features h2 {
-  margin-bottom: 15px;
-  font-size: 1.8rem;
+.feature-content h3 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+  color: #c0fff7;
 }
 
-.feature-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px; /* Reduced gap */
-  margin-bottom: 20px;
-}
-
-.signup form {
-  max-width: 90%; /* Relative unit */
-  width: 100%;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.signup input {
-  padding: 10px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  background: #1b2c2c;
-  color: white;
-}
-
-.signup input::placeholder {
+.feature-content p {
+  font-size: 1.1rem;
   color: #5ed7c1;
+  line-height: 1.6;
+  margin: 0;
 }
 
-.signup .logo {
-  max-width: 50%; /* Smaller logo on mobile */
-  height: auto;
+.app-preview {
+  padding: 0px 20px;
+  text-align: center;
+}
+
+.intro-header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.about-bottom-image {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-bottom-image img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 footer {
@@ -149,72 +356,151 @@ footer {
   font-size: 1rem;
 }
 
-.feature-box {
-  background: #13222a;
-  border-radius: 16px;
-  padding: 20px;
-  width: 100%; /* Full width on mobile */
-  max-width: 300px; /* Limit width on larger screens */
-  color: #5ed7c1;
-  box-shadow: 0 0 15px rgba(41, 130, 118, 0.2);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(94, 215, 193, 0.4);
-}
-
-.feature-icon {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.feature-box h3 {
-  margin: 10px 0 5px;
-  font-size: 1.2rem;
-  color: #30e3ca;
-}
-
-.feature-box p {
-  font-size: 0.9rem;
-  color: #5ed7c1;
-}
-
 .contact {
+    height: 400px;
+    background: linear-gradient(180deg, #000000, #0a1416);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    color: #30e3ca;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Container for the icons */
+.contact-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* General styling for all contact links */
+.contact-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.contact-links a:hover {
+    transform: scale(1.1);
+}
+
+/* Email link (Font Awesome icon) */
+.contact-links .email-btn i {
+    font-size: 2rem;
+    color: #5ed7c1;
+}
+
+.contact-links .email-btn:hover i {
+    color: #30e3ca;
+    text-shadow: 0 0 5px #30e3ca;
+}
+
+/* Play Store button (using your existing badge image) */
+.contact-links .googlePlay-btn i {
+    font-size: 2rem;
+    color: #5ed7c1;
+}
+
+.contact-links .googlePlay-btn:hover i {
+    color: #30e3ca;
+    text-shadow: 0 0 5px #30e3ca;
+}
+
+
+/* Twitter/X link (Font Awesome icon) */
+.contact-links .twitter-btn i {
+    font-size: 2rem;
+    color: #5ed7c1;
+}
+
+.contact-links .twitter-btn:hover i {
+    color: #30e3ca;
+    text-shadow: 0 0 5px #30e3ca;
+}
+
+/* Download the Game Section (Gradient Container) */
+.download-game {
+  height: 400px;
+  background: linear-gradient(180deg, #000000, #1d8c7d, #000000); /* Example gradient */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 40px 5%;
-  font-family: 'Bricolage Grotesque', sans-serif;
-  color: white;
+  color: #fff;
+  padding: 20px;
+}
+
+.download-game h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.download-game p {
+  font-size: 1.1rem;
+  line-height: 1.857;
+  max-width: 800px;
+}
+
+.download-game .playstore-btn:hover {
+  transform: scale(1.05);
+}
+
+.download-game .playstore-btn img {
+  width: 300px;
   height: auto;
-}
-
-.contact p,
-.contact a.contact-email {
-  color: #30e3ca;
-  font-size: 1rem;
-}
-
-.contact a.contact-email {
-  color: #5ed7c1;
-  text-decoration: underline;
-  font-weight: bold;
-}
-
-.contact a.contact-email:hover {
-  color: #30e3ca;
-  text-shadow: 0 0 5px #30e3ca;
 }
 
 /* Media Queries for Larger Screens */
 @media (min-width: 768px) {
-  .section {
-    padding: 60px 10%;
+  .hero-content {
+    flex-direction: row;
+    gap: 60px;
+  }
+
+  .hero-left {
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 40px;
+  }
+
+  .hero-right {
+    align-items: end;
   }
 
   .logo {
-    max-width: 400px;
+    max-width: 500px;
+    align-self: flex-start; 
+  }
+
+  .description {
+    margin: 0; /* Remove auto margin for left alignment */
+  }
+
+  .btn-glow {
+    margin: 0; /* Remove auto margin for left alignment */
+  }
+
+  .section {
+    padding: 60px 10%;
   }
 
   .hero h1 {
@@ -230,24 +516,36 @@ footer {
     font-size: 1.1rem;
   }
 
-  .preview-images {
-    gap: 30px;
+  .about-content {
+    flex-direction: row;
+    gap: 60px;
+    padding: 0 20px;
   }
 
-  .preview-images img {
-    max-width: 300px;
+  .about-left, .about-right {
+    flex: 1;
+    min-width: 300px;
   }
 
-  .features h2 {
-    font-size: 2rem;
+  .about-image {
+    max-width: 80%;
   }
 
-  .feature-grid {
-    gap: 30px;
+  .feature-list {
+    gap: 60px;
+    padding: 0 20px;
   }
 
-  .feature-box {
-    width: 250px;
+  .feature-item {
+    gap: 60px;
+  }
+
+  .feature-content h3 {
+    font-size: 3.6rem;
+  }
+
+  .feature-content p {
+    font-size: 1.2rem;
   }
 
   .signup form {
@@ -256,10 +554,12 @@ footer {
 
   .signup .logo {
     max-width: 200px;
+    align-self: center;
   }
 
   .feature-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    margin-bottom: 100px;
   }
 }
 
@@ -268,27 +568,73 @@ footer {
     padding: 80px 15%;
   }
 
+  .hero-right {
+    align-items: center;
+  }
+
+  .hero-content {
+    gap: 80px;
+    max-width: 1400px;
+  }
+
+  .about-content {
+    gap: 80px;
+    max-width: 1400px;
+  }
+
   .hero h1 {
     font-size: 3.5rem;
   }
 
-  .preview-images {
-    gap: 50px;
+  .feature-list {
+    gap: 80px;
+    max-width: 1400px;
   }
 
-  .feature-grid {
-    gap: 45px;
+  .feature-item {
+    gap: 80px;
   }
 
-  .feature-box {
-    width: 280px;
-  }
 }
 
-
 @media (max-width: 576px) {
+  .hero-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .hero-left, .hero-right {
+    flex: none; /* Override flex: 1 for mobile */
+    width: 100%;
+    min-width: 0;
+    align-items: center; /* Keep centered for mobile */
+  }
+
+  .logo {
+    margin-top: 100px;
+  }
+
+  .description {
+    margin: 0 auto;
+  }
+
+  .btn-glow {
+    margin: 0 auto;
+  }
+
+  .app-screenshot {
+    margin-top: 20px;
+    width: 90%;
+    max-width: 400px;
+  }
+
   .section {
     padding: 20px 3%;
+  }
+
+  .hero {
+    min-height: auto; /* Allow content to dictate height */
+    padding: 40px 20px; /* Minimal padding for mobile */
   }
 
   .hero h1 {
@@ -299,16 +645,102 @@ footer {
     font-size: 0.9rem;
   }
 
-  .preview-images img {
-    max-width: 50%;
-    margin-bottom: 20px;
+  .about-content {
+    flex-direction: column;
+    gap: 30px;
   }
 
-  .feature-box {
+  .about h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-image {
+    max-width: 60%;
+  }
+
+  .about-left, .about-right {
+    flex: none;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .about-right {
+    text-align: center;
+    align-items: center;
+  }
+
+  .about-right p {
+    max-width: 90%;
+    font-size: 1.1rem;
+  }
+
+  .feature-list {
+    gap: 30px;
+  }
+
+  .feature-item {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .feature-item .feature-image {
+    order: 0;
+  }
+
+  .feature-item .feature-content {
+    order: -1;
+  }
+
+  .feature-image, .feature-content {
+    flex: none;
+    width: 100%;
+    min-width: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .feature-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .feature-content p {
     max-width: 90%;
   }
 
   .signup .logo {
     max-width: 40%;
+  }
+  
+  .playstore-btn-icon {
+    width: 200px;
+  }
+
+  .download-game {
+    height: 700px;
+  }
+
+  .download-game .playstore-btn img {
+    width: 200px;
+    height: auto;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin: 10px 0;
+    font-weight: 600;
+  }
+
+  .app-preview {
+    padding: 0px 10px;
+  }
+
+  .intro-header {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+  }
+
+  .about-bottom-image img {
+    border-radius: 6px;
   }
 }
