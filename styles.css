@@ -60,12 +60,11 @@ body {
 }
 
 .app-screenshot {
-  max-width: 60%;
+  max-width: 80%;
   width: 80%;
   height: auto;
   border-radius: 12px;
   margin-top: 40px;
-  box-shadow: 0 0 20px rgba(48, 227, 202, 0.4);
   transition: transform 0.3s ease;
 }
 
@@ -203,15 +202,17 @@ body {
   line-height: 1.6;
 }
 
-.about-right ul {
+.about-right ul,
+.feature-content ul {
   list-style-type: none; /* Remove default bullets */
   padding: 0;
   margin: 20px 0 0 0; /* Add spacing above the list, no left/right/bottom margin */
   text-align: justify;
-
+  align-items: flex-start;
 }
 
-.about-right li {
+.about-right li,
+.feature-content li {
   position: relative;
   padding-left: 25px; /* Space for custom bullet */
   margin-bottom: 10px; /* Space between list items */
@@ -220,13 +221,15 @@ body {
   line-height: 1.6;
 }
 
-.about-right li strong {
+.about-right li strong,
+.feature-content li strong {
   color: #c0fff7;
   font-size: 1.13em;
 }
 
 /* Add a custom bullet using a pseudo-element */
-.about-right li::before {
+.about-right li::before,
+.feature-content li::before {
   content: ">";
   position: absolute;
   left: 0;
@@ -292,7 +295,6 @@ body {
   max-width: 70%;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 0 15px #0fbfab;
   transition: transform 0.3s;
 }
 
@@ -326,7 +328,7 @@ body {
 }
 
 .about-bottom-image {
-    max-width: 1200px;
+    max-width: 2800px;
     margin: 0 auto;
 }
 
@@ -467,6 +469,14 @@ footer {
 .download-game .playstore-btn img {
   width: 300px;
   height: auto;
+}
+
+.blue_dot {
+  margin-left: 5px;
+  background: #318d96;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Media Queries for Larger Screens */
@@ -698,8 +708,25 @@ footer {
     min-width: 0;
     align-items: center;
     text-align: center;
+    text-align: justify;
   }
 
+  .feature-content ul {
+    text-align: left;
+    max-width: 90%;
+    margin-left: 20px; 
+    margin-right: auto; 
+    align-items: flex-start;
+  }
+
+  .feature-content li {
+    text-align: left;
+  }
+
+  .about-right ul,
+  .feature-content ul{
+    align-items: flex-start;
+  }
   .feature-content h3 {
     font-size: 1.4rem;
   }
