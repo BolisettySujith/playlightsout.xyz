@@ -1,0 +1,47 @@
+/* Splash Screen Styles */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0a1416; /* Match your site's background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears above the navbar */
+    overflow: hidden;
+}
+
+.splash-gif {
+    max-width: 90%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Ensure the GIF scales while maintaining aspect ratio */
+    border-radius: 12px; /* Optional: add rounded corners to the GIF */
+}
+
+/* Fade-out animation */
+.fade-out {
+    animation: fadeOut 0.5s ease forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Ensure the body doesn't scroll while the splash screen is visible */
+body.splash-active {
+    overflow: hidden;
+}
+
+/* Adjust navbar z-index to ensure it stays below the splash screen */
+.navbar {
+    z-index: 999; /* Already set in your CSS, just confirming */
+}
