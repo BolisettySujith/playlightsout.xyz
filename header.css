@@ -1,7 +1,11 @@
 .navbar {
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 0; /* Add this to allow centering */
+  right: 0; /* Add this to allow centering */
+  width: 100%; /* Ensure it spans the viewport */
+  max-width: 1600px; /* Limit the width on desktop */
+  margin: 0 auto; /* Center the navbar horizontally */
   background: #0a1416dd; /* semi-transparent */
   backdrop-filter: blur(10px);
   z-index: 999;
@@ -11,8 +15,8 @@
   justify-content: space-between;
   align-items: center;
   font-family: 'Bricolage Grotesque', sans-serif;
+  border-radius: 0 0 20px 20px;
 }
-
 
 .nav-logo {
   font-size: 22px;
@@ -59,55 +63,66 @@
 }
 
 .hamburger {
-    display: none;
-    cursor: pointer;
+  display: none;
+  cursor: pointer;
 }
 
 .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: white;
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
 }
 
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
 
-@media(max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
 
-    .hamburger.active .bar:nth-child(2){
-        opacity: 0;
-    }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
 
-    .hamburger.active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 
-    .hamburger.active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    background: #0a1416dd;
+    backdrop-filter: blur(1px);
+    z-index: 999;
+    padding: 15px 30px;
+  }
 
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        gap: 0;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        background: #223436;
-    }
+  .nav-item {
+    margin: 16px 0;
+  }
 
-    .nav-item {
-        margin: 16px 0;
-    }
+  .nav-menu.active {
+    left: 0;
+  }
 
-    .nav-menu.active {
-        left: 0;
-    }
+  /* Override desktop styles for mobile */
+  .navbar {
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    margin: 0;
+    border-radius: 0 0 20px 20px;
+  }
 }
