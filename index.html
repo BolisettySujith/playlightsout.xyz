@@ -31,7 +31,9 @@
   <header>
     <nav class="navbar">
         <div class="nav-logo">
+          <a href="/">
             <img src="assets/lightsout-logo-header.png" alt="Lights Out Logo"/>
+          </a>
         </div>
         <ul class="nav-menu">
           <li class="nav-item"><a href="/">Home</a></li>
@@ -39,7 +41,9 @@
           <li class="nav-item"><a href="#features">Features</a></li>
           <li class="nav-item"><a href="#preview">Preview</a></li>
           <li class="nav-item"><a href="#contact">Contact</a></li>
-          <li class="nav-item"><a href="#download" class="btn-nav-glow">Install App</a></li>
+          <li class="nav-item"><a href="#download" class="btn-nav-glow">
+            <i class="fab fa-google-play"></i>  Install Game</a>
+          </li>
         </ul>
         <div class="hamburger">
           <span class="bar"></span>
@@ -60,7 +64,7 @@
         </a>
       </div>
       <div class="hero-right">
-        <img src="assets/game-play.png" alt="App Screenshot" class="app-screenshot" />
+        <img src="assets/home-images.gif" alt="App Screenshot" class="app-screenshot" />
       </div>
     </div>
   </section>
@@ -86,57 +90,89 @@
 
   <section id="features" class="features section">
     <h2>Features</h2>
-    <p class="feature-subtitle">Packed with challenges, strategy twists, and daily surprises to keep your brain buzzing.</p>
+    <p class="feature-subtitle">Dive into a world of glowing tiles, brain-burning puzzles, and daily challenges<br><br>— all crafted to test your wits, style your play, and celebrate your victories.</p>
     <div class="feature-list">
-      <!-- Feature 1: Image on left, content on right -->
+      <!-- Feature 1: game board -->
       <div class="feature-item">
         <div class="feature-image">
-          <img src="assets/game-play.png" alt="Brain Teasers" class="feature-img" />
+          <img src="assets/features/feature-gameboard.gif" alt="Brain Teasers" class="feature-img" />
         </div>
         <div class="feature-content">
-          <h3>Brain Teasers</h3>
+          <h3>Brain Teasers<span class="blue_dot">.</span></h3>
           <p>Test your mind with evolving puzzles that change every level. Each grid offers a new challenge, pushing your problem-solving skills to the limit as you strategize to turn off all the lights.</p>
+          <ul>
+            <li><strong>3 X 3</strong></li>
+            <li><strong>5 X 5</strong></li>
+            <li><strong>6 X 6</strong></li>
+            <li><strong>7 X 7</strong></li>
+            <li><strong>8 X 8</strong></li>
+            <span class="blue_dot">:</span>
+            <li><strong>15 X 15</strong></li>
+          </ul>
+        </div>
         </div>
       </div>
-      <!-- Feature 2: Content on left, image on right -->
+      <!-- Feature 2: themes -->
       <div class="feature-item">
         <div class="feature-content">
-          <h3>Tile Themes</h3>
+          <h3>Tile Themes<span class="blue_dot">.</span></h3>
           <p>Unlock and switch between glowing, emoji, and custom tile styles. Personalize your game with vibrant themes that make every puzzle visually exciting.</p>
+          <ul>
+            <li><strong>Neon Theme</strong></li>
+            <li><strong>Emoji Theme:</strong></li>
+            <li><strong>Cat Theme</strong></li>
+            <li><strong>Doraemon Theme</strong> Comming soon<span class="blue_dot">..</span></li>
+            <li><strong>Shinchan Theme</strong> Comming soon<span class="blue_dot">..</span></li>
+          </ul>
         </div>
         <div class="feature-image">
-          <img src="assets/game-theme.png" alt="Tile Themes" class="feature-img" />
+          <img src="assets/features/feature-themes.png" alt="Tile Themes" class="feature-img" />
         </div>
       </div>
-      <!-- Feature 3: Image on left, content on right -->
+      <!-- Feature 3: leaderboard -->
       <div class="feature-item">
         <div class="feature-image">
-          <img src="assets/game-play.png" alt="Timed Challenges" class="feature-img" />
+          <img src="assets/features/feature-leaderboard.png" alt="Timed Challenges" class="feature-img" />
         </div>
         <div class="feature-content">
-          <h3>Timed Challenges</h3>
-          <p>Race the clock in daily puzzles and speed-run your best scores. Compete against time to solve grids and earn rewards for your quick thinking.</p>
+          <h3>Global Leaderboard<span class="blue_dot">.</span></h3>
+          <p>Climb the ranks and prove you're the brightest bulb in the box!<br> See how your scores stack up against players worldwide daily in leaderboards.</p>
+          <ul>
+            <li><strong>1st Place</strong> ( <img src="assets/features/coin_gold.svg" width="20" style="position: relative; top: 3px;"> 350 )</li>
+            <li><strong>2nd Place</strong> ( <img src="assets/features/coin_gold.svg" width="20" style="position: relative; top: 3px;"> 300 )</li>
+            <li><strong>3rd Place</strong> ( <img src="assets/features/coin_gold.svg" width="20" style="position: relative; top: 3px;"> 250 )</li>
+          </ul>
         </div>
       </div>
-      <!-- Feature 4: Content on left, image on right -->
+      <!-- Feature 4: achivements -->
       <div class="feature-item">
         <div class="feature-content">
-          <h3>Achievements</h3>
-          <p>Earn crowns and milestones as you level up your skills. Celebrate your progress with achievements that mark your journey as a puzzle master.</p>
+          <h3>Daily Wins<span class="blue_dot">.</span></h3>
+          <p>Complete daily challenges to unlock crowns, boost your streak, and earn bragging rights! Each win brings you closer to exclusive tiles themes and shiny milestones.</p>
         </div>
         <div class="feature-image">
-          <img src="assets/game-won.png" alt="Achievements" class="feature-img" />
+          <img src="assets/features/feature-achivements.png" alt="Achievements" class="feature-img" />
         </div>
       </div>
-      <!-- Feature 5: Image on left, content on right -->
+      <!-- Feature 5: hints-->
       <div class="feature-item">
         <div class="feature-image">
-          <img src="assets/game-play.png" alt="Hints" class="feature-img" />
+          <img src="assets/features/feature-hints.png" alt="Hints" class="feature-img" />
         </div>
         <div class="feature-content">
-          <h3>Hints</h3>
-          <p>Use limited hints to break through the toughest puzzles. When you're stuck, a hint can guide you toward the solution without spoiling the challenge.</p>
+          <h3>Hints<span class="blue_dot">.</span></h3>
+          <p>Use limited hints to break through the toughest puzzles.<br><br> When you're stuck, a hint can guide you toward the solution without spoiling the challenge.</p>
         </div>
+      </div>
+    </div>
+    <!-- Feature 6: profile stats -->
+    <div class="feature-item">
+      <div class="feature-content">
+        <h3>Your Game Legacy<span class="blue_dot">.</span></h3>
+        <p>Track your journey with detailed stats — from games played to your longest winning streak.<br><br> See your challenge victories, flex your leaderboard ranks, and show off your collection of epic themes.</p>
+      </div>
+      <div class="feature-image">
+        <img src="assets/features/feature-profile-stats.png" alt="Achievements" class="feature-img" />
       </div>
     </div>
   </section>
