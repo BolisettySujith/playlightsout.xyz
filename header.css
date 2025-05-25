@@ -1,12 +1,12 @@
 .navbar {
   position: fixed;
   top: 0;
-  left: 0; /* Add this to allow centering */
-  right: 0; /* Add this to allow centering */
-  width: 100%; /* Ensure it spans the viewport */
-  max-width: 1600px; /* Limit the width on desktop */
-  margin: 0 auto; /* Center the navbar horizontally */
-  background: #0a1416dd; /* semi-transparent */
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+  background: #0a1416dd;
   backdrop-filter: blur(10px);
   z-index: 999;
   padding: 15px 30px;
