@@ -31,7 +31,7 @@ body {
   display: flex; 
   justify-content: center;
   align-items: center; 
-  background: linear-gradient(180deg, #145d62, #0b2f32, #0a1416);
+  background: linear-gradient(180deg, #145d62, #0b2f32, #0e1c1f,#0a1416);
 }
 
 .hero-content {
@@ -496,6 +496,12 @@ footer {
     align-items: end;
   }
 
+  .app-screenshot {
+    margin-top: 80px;
+    max-width: 70%;
+    width: 70%;
+  }
+
   .logo {
     max-width: 500px;
     align-self: flex-start; 
@@ -580,6 +586,12 @@ footer {
 
   .hero-right {
     align-items: center;
+  }
+
+  .app-screenshot {
+    margin-top: 80px;
+    max-width: 80%;
+    width: 80%;
   }
 
   .hero-content {
@@ -708,6 +720,10 @@ footer {
     min-width: 0;
     align-items: center;
     text-align: center;
+    text-align: justify;
+  }
+
+  .feature-subtitle {
     text-align: justify;
   }
 
