@@ -23,21 +23,32 @@
   <link rel="stylesheet" href="styles.css"/>
   <link rel="stylesheet" href="footer.css"/>
   <link rel="stylesheet" href="header.css"/>
+  <link rel="stylesheet" href="splash.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 </head>
 <body>
+  <!-- Splash Screen -->
+  <div class="splash-screen" id="splashScreen">
+      <img src="assets/game_bg.gif" alt="Splash Screen GIF" class="splash-gif" />
+  </div>
   <header>
     <nav class="navbar">
         <div class="nav-logo">
+          <a href="/">
             <img src="assets/lightsout-logo-header.png" alt="Lights Out Logo"/>
+          </a>
         </div>
         <ul class="nav-menu">
           <li class="nav-item"><a href="/">Home</a></li>
           <li class="nav-item"><a href="#about">About</a></li>
           <li class="nav-item"><a href="#features">Features</a></li>
+          <li class="nav-item"><a href="#preview">Preview</a></li>
           <li class="nav-item"><a href="#contact">Contact</a></li>
-          <li class="nav-item"><a href="#beta-form" class="btn-nav-glow">Join Beta</a></li>
+          <li class="nav-item"><a href="#download" class="btn-nav-glow">
+            <i class="fab fa-google-play"></i>  Install Game</a>
+          </li>
         </ul>
         <div class="hamburger">
           <span class="bar"></span>
@@ -47,88 +58,188 @@
     </nav>
   </header>
 
-  <section id="home" class="hero section">
-    <div class="content">
-      <img src="assets/lightsout-logo.png" alt="Lights Out Logo" class="logo"/>
-      <p>Challenge your brain with glowing puzzles and daily thrills.</p>
-      <a href="#beta-form" class="btn-glow">Join Beta</a>
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <div class="hero-left">
+        <img src="assets/game_logo_horizantal.png" alt="Lights Out Logo" class="logo" />
+        <h2 class="subtitle glow-text">The Brain Teasing Puzzle Game</h2>
+        <p class="description">Flip the lights, solve the grid, and win daily rewards. Available soon on Android!</p>
+        <a href="https://play.google.com/store/apps/details?id=com.sujith.lights_out_game" class="btn playstore-btn">
+          <img src="assets/google-play-badge.png" alt="Play Store" class="playstore-btn-icon" />
+        </a>
+      </div>
+      <div class="hero-right">
+        <img src="assets/home-images.gif" alt="App Screenshot" class="app-screenshot" />
+      </div>
     </div>
   </section>
 
   <section id="about" class="about section">
     <h2>What's Lights Out?</h2>
-    <p>A modern reimagining of the classic puzzle game with custom tile themes, daily challenges, and custom grids.</p>
-    <div class="preview-images">
-      <img src="assets/game-play.png" alt="Game Grid" />
-      <img src="assets/game-theme.png" alt="Theme Options" />
-      <img src="assets/game-won.png" alt="Victory Screen" />
+    <div class="about-content">
+      <div class="about-left">
+        <img src="assets/game_about_us.gif" alt="Game Grid" class="about-image" />
+      </div>
+      <div class="about-right">
+        <p>Lights Out is a modern reimagining of the classic puzzle game that has been challenging players for decades. Your goal is simple yet deceptively tricky: turn off all the lights on the grid by flipping tiles, where each move toggles the state of a tile and its neighbors, requiring strategic thinking to solve the puzzle.</p>
+        <ul>
+          <li><strong>Custom Tile Themes:</strong> Personalize your game with vibrant, glowing, or emoji styles.</li>
+          <li><strong>Daily Challenges:</strong> Test your skills with new puzzles every day.</li>
+          <li><strong>Adjustable Grid Sizes:</strong> Choose your difficulty with varying grid dimensions.</li>
+          <li><strong>Endless Fun:</strong> Enjoy brain-teasing excitement that keeps you coming back.</li>
+          <li><strong>For Everyone:</strong> Perfect for puzzle enthusiasts and casual gamers alike, offering a fresh experience every time.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <section id="features" class="features section">
     <h2>Features</h2>
-    <p class="feature-subtitle">Packed with challenges, strategy twists, and daily surprises to keep your brain buzzing.</p>
-    <div class="feature-grid">
-      <div class="feature-box">
-        <div class="feature-icon">🧠</div>
-        <h3>Brain Teasers</h3>
-        <p>Test your mind with evolving puzzles that change every level.</p>
+    <p class="feature-subtitle">Dive into a world of glowing tiles, brain-burning puzzles, and daily challenges<br><br>— all crafted to test your wits, style your play, and celebrate your victories.</p>
+    <div class="feature-list">
+      <!-- Feature 1: game board -->
+      <div class="feature-item">
+        <div class="feature-image">
+          <img src="assets/features/feature-gameboard.gif" alt="Brain Teasers" class="feature-img" />
+        </div>
+        <div class="feature-content">
+          <h3>Brain Teasers<span class="blue_dot">.</span></h3>
+          <p>Test your mind with evolving puzzles that change every level. Each grid offers a new challenge, pushing your problem-solving skills to the limit as you strategize to turn off all the lights.</p>
+          <ul>
+            <li><strong>3 X 3</strong></li>
+            <li><strong>5 X 5</strong></li>
+            <li><strong>6 X 6</strong></li>
+            <li><strong>7 X 7</strong></li>
+            <li><strong>8 X 8</strong></li>
+            <span class="blue_dot">:</span>
+            <li><strong>15 X 15</strong></li>
+          </ul>
+        </div>
+        </div>
       </div>
-      <div class="feature-box">
-        <div class="feature-icon">🎨</div>
-        <h3>Tile Themes</h3>
-        <p>Unlock and switch between glowing, emoji, and custom tile styles.</p>
+      <!-- Feature 2: themes -->
+      <div class="feature-item">
+        <div class="feature-content">
+          <h3>Tile Themes<span class="blue_dot">.</span></h3>
+          <p>Unlock and switch between glowing, emoji, and custom tile styles. Personalize your game with vibrant themes that make every puzzle visually exciting.</p>
+          <ul>
+            <li><strong>Neon Theme</strong></li>
+            <li><strong>Emoji Theme:</strong></li>
+            <li><strong>Cat Theme</strong></li>
+            <li><strong>Doraemon Theme</strong> Comming soon<span class="blue_dot">..</span></li>
+            <li><strong>Shinchan Theme</strong> Comming soon<span class="blue_dot">..</span></li>
+          </ul>
+        </div>
+        <div class="feature-image">
+          <img src="assets/features/feature-themes.png" alt="Tile Themes" class="feature-img" />
+        </div>
       </div>
-      <div class="feature-box">
-        <div class="feature-icon">⏱️</div>
-        <h3>Timed Challenges</h3>
-        <p>Race the clock in daily puzzles and speed-run your best scores.</p>
+      <!-- Feature 3: leaderboard -->
+      <div class="feature-item">
+        <div class="feature-image">
+          <img src="assets/features/feature-leaderboard.png" alt="Timed Challenges" class="feature-img" />
+        </div>
+        <div class="feature-content">
+          <h3>Global Leaderboard<span class="blue_dot">.</span></h3>
+          <p>Climb the ranks and prove you're the brightest bulb in the box!<br> See how your scores stack up against players worldwide daily in leaderboards.</p>
+          <ul>
+            <li><strong>1st Place</strong> ( <img src="assets/features/coin_gold.svg" width="20" style="position: relative; top: 3px;"> 350 )</li>
+            <li><strong>2nd Place</strong> ( <img src="assets/features/coin_gold.svg" width="20" style="position: relative; top: 3px;"> 300 )</li>
+            <li><strong>3rd Place</strong> ( <img src="assets/features/coin_gold.svg" width="20" style="position: relative; top: 3px;"> 250 )</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Feature 4: achivements -->
+      <div class="feature-item">
+        <div class="feature-content">
+          <h3>Daily Wins<span class="blue_dot">.</span></h3>
+            <p>Take on a fresh puzzle every 24 hours — globally synced at midnight UTC !<br><br>Crush the daily challenge to earn crowns, keep your streak alive, and unlock exclusive tile themes. Miss a day? Say goodbye to that streak!</p>
+        </div>
+        <div class="feature-image">
+          <img src="assets/features/feature-achivements.png" alt="Achievements" class="feature-img" />
+        </div>
+      </div>
+      <!-- Feature 5: hints-->
+      <div class="feature-item">
+        <div class="feature-image">
+          <img src="assets/features/feature-hints.png" alt="Hints" class="feature-img" />
+        </div>
+        <div class="feature-content">
+          <h3>Hints<span class="blue_dot">.</span></h3>
+          <p>Use limited hints to break through the toughest puzzles.<br><br> When you're stuck, a hint can guide you toward the solution without spoiling the challenge.</p>
+        </div>
       </div>
     </div>
-    <div class="feature-grid">
-        <div class="feature-box">
-          <div class="feature-icon">👑</div>
-          <h3>Achievements</h3>
-          <p>Earn crowns and milestones as you level up your skills.</p>
-        </div>
-        <div class="feature-box">
-          <div class="feature-icon">💭</div>
-          <h3>Hints</h3>
-          <p>Use limited hints to break through the toughest puzzles.</p>
-        </div>
+    <!-- Feature 6: profile stats -->
+    <div class="feature-item">
+      <div class="feature-content">
+        <h3>Your Game Legacy<span class="blue_dot">.</span></h3>
+        <p>Track your journey with detailed stats — from games played to your longest winning streak.<br><br> See your challenge victories, flex your leaderboard ranks, and show off your collection of epic themes.</p>
       </div>
-  </section>
-  
-  <section id="contact" class="contact section">
-    <h2>Contact Us</h2>
-    <p>Have questions, suggestions, or feedback?</p>
-    <p>Email us at: 
-      <a href="mailto:lightsout.bsgames@gmail.com" class="contact-email">
-        lightsout.bsgames@gmail.com
-      </a>
-    </p>
-    <p>Created by: 
-      <a href="https://bolisettysujith.github.io" class="contact-email">
-        bolisettysujith.github.io
-      </a>
-    </p>
+      <div class="feature-image">
+        <img src="assets/features/feature-profile-stats.png" alt="Achievements" class="feature-img" />
+      </div>
+    </div>
   </section>
 
-  <section id="beta-form" class="signup section">
-    <img src="assets/lightsout-logo.png" alt="Lights Out Logo" class="logo"/>
-    <h2>Beta Sign-Up Closed</h2>
-    <img src="https://developer.android.com/static/images/brand/android-head_3D.png" alt="Android Logo" class="android-logo" width="150px"/>
-    <p>Thanks to everyone who joined the beta for <strong>Lights Out Game</strong>!</p>
-    <p>The beta phase is now closed, and we’re incredibly grateful for your support and feedback.</p>
-    <p>We’re putting the final touches on the game and will be launching <strong>very soon on the Play Store</strong>. Stay tuned!</p>
-    <p>Follow us on X for the latest updates and launch announcements:</p>
-    <a href="https://x.com/lightsout_buzz" target="_blank" class="btn-glow">Follow Us on X</a>
+  <section id="preview">
+    <div class="row app-preview">
+      <h1 class="intro-header" data-aos="fade-up">Game Preview</h1>           
+      <div class="row about-bottom-image">
+          <img src="assets/app-screens.png" 
+                srcset="assets/app-screens.png 600w, 
+                        assets/app-screens.png 1200w, 
+                        assets/app-screens.png 2800w" 
+                sizes="(max-width: 2800px) 100vw, 2800px"
+                alt="App Screenshots" data-aos="fade-up">
+      </div>
+    </div>
   </section>
 
-    <footer>
+  <section id="download">
+    <div class="download-game">
+        <h2 data-aos="fade-up">Download the Game</h2>
+        <p>Play the game, enjoy the puzzles, and when you’ve crushed a few, spread the word! <br>Share it with your friends so they can join the fun too!</p>
+        <a href="https://play.google.com/store/apps/details?id=com.sujith.lights_out_game" class="btn playstore-btn">
+          <img src="assets/google-play-badge.png" alt="Play Store" class="playstore-btn-icon" />
+        </a>
+    </div>
+  </section>
+
+  <section id="contact">
+      <!-- Contact Section -->
+      <div class="contact">
+          <h2 data-aos="fade-up">Contact</h2>
+          <p data-aos="fade-up">Have questions, suggestions, or feedback?</p>
+          <div class="contact-links" data-aos="fade-up">
+              <!-- Email Icon -->
+              <a href="mailto:lightsout.bsgames@gmail.com" class="email-btn">
+                  <i class="fas fa-envelope"></i>
+              </a>
+              <!-- Play Store Icon -->
+              <a href="https://play.google.com/store/apps/details?id=com.sujith.lights_out_game" class="googlePlay-btn">
+                  <i class="fab fa-google-play"></i>
+              </a>
+              <!-- Twitter/X Icon -->
+              <a href="https://x.com/lightsout_buzz" class="twitter-btn">
+                  <i class="fab fa-x-twitter"></i>
+              </a>
+              <!-- Instagram Icon -->
+              <a href="https://www.instagram.com/_suj8_/" class="twitter-btn">
+                  <i class="fab fa-instagram"></i>
+              </a>
+              <!-- Youtube Icon -->
+              <a href="https://www.youtube.com/@lightsout_buzz" class="twitter-btn">
+                  <i class="fab fa-youtube"></i>
+              </a>
+          </div>
+      </div> <!-- end contact -->
+  </section>
+
+  <footer>
     <div class="footer-left">© 2025 Lights Out. All rights reserved.</div>
     <div class="footer-nav">
-      <a href="index.html">Home</a>
+      <a href="/">Home</a>
       <a href="privacy.html">Privacy</a>
       <a href="#contact">Contact</a>
     </div>
