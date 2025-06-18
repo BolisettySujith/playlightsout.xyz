@@ -440,7 +440,7 @@ footer {
 
 /* Download the Game Section (Gradient Container) */
 .download-game {
-  height: 400px;
+  height: 500px;
   background: linear-gradient(180deg, #000000, #1d8c7d, #000000); /* Example gradient */
   display: flex;
   flex-direction: column;
