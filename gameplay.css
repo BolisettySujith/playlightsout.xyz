@@ -1,0 +1,120 @@
+.gameplay {
+  padding: 40px 5%;
+  text-align: center;
+  background: linear-gradient(180deg, #0a1416, #1d8c7d, #000000);
+}
+
+.gameplay h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.gameplay-subtitle {
+  color: #5ed7c1;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  max-width: 90%;
+  text-align: center;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  margin: 0 10px; /* Margin between items */
+  width: calc(100% / 3 - 20px); /* Default: 3 items visible, accounting for margins */
+  aspect-ratio: 9 / 16; /* Maintain YouTube Shorts aspect ratio */
+  min-width: 200px; /* Minimum width to prevent items from becoming too small */
+  max-width: 360px; /* Maximum width for larger screens */
+}
+
+.carousel-item iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.carousel-item:hover iframe {
+  transform: scale(1.03);
+  border-radius: 12px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #30e3ca;
+  border: none;
+  padding: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.left-btn {
+  left: 10px;
+}
+
+.right-btn {
+  right: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 576px) {
+  .gameplay {
+    padding: 20px 3%;
+  }
+
+  .gameplay h2 {
+    font-size: 1.5rem;
+  }
+
+  .gameplay-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .carousel-item {
+    width: calc(100% - 20px); /* Single item takes full width minus margins */
+    max-width: 280px; /* Smaller max-width for mobile */
+  }
+
+  .carousel-btn {
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-item {
+    width: calc(100% / 2 - 20px); /* Show 2 items on tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-container {
+    max-width: calc(100% - 30px); /* Match section padding (15% total) */
+    margin: 0 auto;
+  }
+
+  .carousel-item {
+    width: calc(100% / 3 - 20px); /* Show 3 items on desktop */
+  }
+}
